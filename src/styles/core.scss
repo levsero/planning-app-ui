@@ -13,11 +13,16 @@
     margin: 0;
     padding: 0;
     height: 100%;
+    background-color: #eee;
   }
 
   *,
   *:before,
   *:after {
     box-sizing: inherit;
+  }
+  
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
   }
 }
