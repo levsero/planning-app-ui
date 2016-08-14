@@ -2,18 +2,22 @@
 import CoreLayout from '../layouts/CoreLayout/CoreLayout'
 import Home from './Home'
 import CounterRoute from './Counter'
-
+import DashboardRoute from './Dashboard'
+import Counter from 'components/Counter'
 /*  Note: Instead of using JSX, we recommend using react-router
     PlainRoute objects to build route definitions.   */
 
-export const createRoutes = (store) => ({
+export const createRoutes = (store) => {
+  return({
   path: '/',
   component: CoreLayout,
   indexRoute: Home,
   childRoutes: [
-    CounterRoute(store)
+    CounterRoute(store),
+    DashboardRoute(store)
   ]
 })
+}
 
 /*  Note: childRoutes can be chunked or otherwise loaded programmatically
     using getChildRoutes with the following signature:
