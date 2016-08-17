@@ -18,7 +18,7 @@ export const createRoutes = (store) => {
         DashboardRoute(store)
       ],
       onEnter(nextState, replace) {
-        if (1===2)
+        if (1==2)
         replace('/login')
       }
     },

@@ -4,8 +4,11 @@ export default (store) => ({
   path: 'login',
   getComponent (nextState, cb) {
     require.ensure([], (require) => {
-      const LoginForm = require('components/LoginForm').default
+      const LoginForm = require('./containers/LoginForm').default
+      const reducer = require('./modules/login').default
+      injectReducer(store, { key: 'login', reducer })
+      
       cb(null, LoginForm)
-  }, 'LoginForm')
+  }, 'login')
   }
 })
